@@ -1,0 +1,138 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.posts-list{
+    list-style:none;
+    margin:5px;
+    gap:20%;
+    height: fit-content;
+  
+}
+.flex{
+    display: flex;
+    flex-direction: row;
+}
+.Home{
+    padding: 0;
+    margin: 0;
+}
+.column{
+    display: flex;
+    flex-direction: column;
+}
+.mid{
+    align-items: center;
+    justify-content: center;
+}
+.gap{
+    gap: 5px;
+}
+.mid-y{
+    align-items:center ;
+}
+.reactions{
+    justify-content: space-between;
+}
+.post-img-container{
+    height: fit-content;
+}
+.post-head{
+    justify-content: space-between;
+}
+.post-item{
+    padding-top:2%;
+    border-top: 1px solid lightgray;
+    margin: 3%;
+    width: 40vw;   
+    
+}
+.posts-list>li{
+    height: fit-content;
+
+}
+.post-img{
+    height: 100%;
+    width: 100%;
+    border-radius: 4px;
+}
+.less{
+    overflow: hidden;
+}
+.post-text{
+    height: fit-content;
+}
+.more{
+    height: fit-content;
+    overflow: visible;
+}
+.user{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+.reaction-btn{
+    cursor: pointer;
+    
+}
+.gap-10{
+    gap: 10px;
+}
+.user-bg{
+    background-image:linear-gradient(45deg, rgb(224, 189, 34), rgb(224, 154, 22), rgb(231, 29, 29)) ;
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+}
+.description{
+    width: 100%;
+    
+    
+    margin: 1%;
+   padding: 1px;
+   text-wrap: wrap;
+}
+.toggle-text{
+    margin-top: 1%;
+    cursor: pointer;
+    color: rgba(150,150,150, 0.8);
+}
+.owner{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+.owner-bg{
+    background-image:linear-gradient(45deg, rgb(224, 189, 34), rgb(224, 154, 22), rgb(231, 29, 29)) ;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+.user-ref{
+    position: absolute;
+    top:10px;
+    right: 25px;
+}
+.prof{
+    width: 100%;
+}
+.prof>h4{
+    width: 70%;
+}
+.suggestion{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 5px;
+}
+input{
+    width: 100%;
+    height: 2rem;
+    border: 1px solid lightgray;
+    border-radius: 0.25rem;
+}
+.suggestions-head{
+    justify-content: space-between;
+}

@@ -1,0 +1,129 @@
+
+.flex{
+    display: flex;
+
+}
+.flex-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.column{
+    display: flex;
+    flex-direction: column;
+}
+.statics{
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    gap: 3px;
+}
+.infos{
+    margin: 0;
+    padding: 0;
+}
+.statics>span{
+    font-size: 15px;
+}
+.gap-30{
+    gap: 30px;
+   
+}
+.profile{
+    padding: 10%;
+}
+.pro-i-c{
+    width: 150px;
+    height: 150px;
+    border: 1px solid white;
+    
+    border-radius: 50%;
+    background-image: linear-gradient(45deg, rgb(224, 189, 34), rgb(224, 154, 22), rgb(231, 29, 29));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-info{
+    padding-top: 10%;
+   gap: 200px;
+   padding-left: 10%;
+   margin: 3%;
+}
+button{
+    height: fit-content;
+    width: fit-content;
+    background-color: inherit;
+    border: none;
+    font-size: large;
+    cursor: pointer;
+}
+.infos{
+    gap: 10px;
+}
+
+#profile-img{
+    height: 93%;
+    width: 93%;
+    border-radius: 50%;
+    
+ border: 1px solid white;
+  
+}
+.description{
+    width: 20vw;
+    min-width: 200px;
+    height: 10vh;
+    min-height: 50px;
+    text-wrap: wrap;
+   
+}
+.less{
+    overflow: hidden;
+}
+
+.more{
+    height: fit-content;
+    overflow: visible;
+}
+.rend{
+    margin-bottom: 0;
+    cursor: pointer;
+    color: rgb(164, 165, 167);
+    margin-top:1px ;
+    
+}
+.mid{
+    justify-content: center;
+}
+.gap-20{
+    gap: 20px;
+}
+.mid-y{
+align-items: center;
+}
+.gap-5{
+    gap: 5px;
+}
+.p{
+    cursor: pointer;
+}
+.active{
+    border-top: 2px solid black;
+}
+.posts{
+    margin-left: 6%;
+    gap: 2px;
+    width: 70 vw;
+    min-width: 600px;
+}
+.post{
+    width: 30%;
+    min-width: 200px;
+    height: 30vh;
+    cursor: pointer;
+}
+.post>img{
+    height: 100%;
+    width: 100%;
+}
