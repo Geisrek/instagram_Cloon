@@ -12,7 +12,7 @@ const Post=({index,description,likes,user,time})=>{
                     <div className="mid-y post-head flex "><div className="post-info mid flex gap-10">
                         <div className="user-bg flex mid">
                             <img src={profile} className="user"/></div><div className="flex mid gap"> <h4>{user}</h4>
-                    <span>{time}</span></div></div><button>...</button></div>
+                    <span>.{time}</span></div></div><button>...</button></div>
                     <div className="post-img-container"><img src={profile} className="post-img"/></div>
                     <div className={`column post-text`}>
                         <span>{likes} likes</span>

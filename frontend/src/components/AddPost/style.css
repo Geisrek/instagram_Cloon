@@ -1,0 +1,30 @@
+.post-bar{
+    position: absolute;
+    left: 30%;
+    top: 10%;
+    width:30vw;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+}
+.post-bar>input{
+   width: 80%;
+   height: 3rem;
+   font-size: 1.6rem;
+   border-radius: 0.25rem;
+   color: rgb(165, 164, 164);
+   padding-left: 1%;
+}
+.post-bar>img{
+    position: absolute;
+    left: 80%;
+    top: 30%;
+    
+}
+.add-btn{
+border: 1px solid rgb(0, 119, 255);
+height: 3rem;
+width: 5rem;
+font-size: 1.6rem;
+
+}

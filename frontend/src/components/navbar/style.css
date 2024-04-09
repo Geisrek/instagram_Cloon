@@ -31,3 +31,6 @@
 .nav-item{
     cursor: pointer;
 }
+.nav-item:hover{
+    color: white;
+}

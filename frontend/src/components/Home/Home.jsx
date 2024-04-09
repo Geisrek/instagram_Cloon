@@ -20,7 +20,7 @@ const Home =()=>{
             <ul className="posts-list column gap-30">
                 <li className="column post-item">
                     <div className="mid-y post-head flex "><div className="post-info mid flex gap-10"><div className="user-bg flex mid"><img src={profile} className="user"/></div><div className="flex mid gap"> <h4>Rafik</h4>
-                    <span>5h</span></div></div><button>...</button></div>
+                    <span>.5h</span></div></div><button>...</button></div>
                     <div className="post-img-container"><img src={profile} className="post-img"/></div>
                     <div className={`column post-text`}>
                         <span>1K likes</span>
@@ -35,7 +35,7 @@ const Home =()=>{
                 <Post index={1} user={"Nambiha"} likes={"10k"} time={"5m"} description={"Lorem ipsum dolor, sit amet consectetur adipisicing elit."}/>
             </ul>
         </div>
-        <div className="column user-ref gap-30"><div className="flex mid gap-10  prof"><di className="user-bg flex mid"><img className="user" src={profile} alt="" /></di><h4>User Name</h4></div>
+        <div className="column user-ref gap-30"><div className="flex mid gap-10  prof"><div className="user-bg flex mid"><img className="user" src={profile} alt="" /></div><h4>User Name</h4></div>
         <div className="suggestions-head flex"><span>Suggestion for you</span><h4>See all</h4></div>
         <ul className="suggestion">
             <li>
