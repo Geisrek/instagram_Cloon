@@ -5,16 +5,26 @@
 .flex{
     display: flex;
 }
-.gap{
+.nav-gap{
+    gap: 30px;
+}
+.gap-5{
     gap: 5px;
 }
 .navbar{
+    position: relative;
     justify-content: space-between;
     align-items: center;
-    font-size: 3rem;
-    width: 200px;
+    font-size: 2rem;
+    width: 20vw;
+    left: 0;
+    background-color: rgb(226, 224, 224);
     
 }
 .logout{
+    font-size: 2rem;
     margin-top: 500px;
+}
+.nav-item{
+    cursor: pointer;
 }

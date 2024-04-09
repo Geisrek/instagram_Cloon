@@ -2,9 +2,11 @@ import "./style.css"
 import useSignin from "./Hook"
 import intro1 from "../assets/intro1.png"
 import facebook from "../assets/facebook.svg"
+import Navbar from "../navbar/navbar"
 const Signin=()=>{
     const{userName,password,setUserName,setPassword,navigate}=useSignin()
 return(<section className="flex signin">
+
     <div className="intro">
         <img src={intro1} alt="" srcset="" className="intro-img"/>
     </div>

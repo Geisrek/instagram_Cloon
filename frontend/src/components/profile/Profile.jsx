@@ -3,11 +3,16 @@ import useProfile from "./Hooks"
 import rows from "../assets/rows1.svg"
 import reels from "../assets/reels.svg"
 import tagg from "../assets/Tagg.svg"
+import Navbar from "../navbar/navbar"
 import "./styles.css"
 const Profile=()=>{
     const {more,actives,setActives,setMore}=useProfile()
     return(
+        <section className="flex">
+            <Navbar/>
         <section className="profile column">
+            
+            
             <div className="profile-info flex">
                 <div className="pro-i-c" ><img src={profile} id="profile-img"/></div>
                 <div className="column infos">
@@ -49,6 +54,7 @@ const Profile=()=>{
             <div className="post"><img src={profile}/></div>
             <div className="post"><img src={profile}/></div>
            </div>
+        </section>
         </section>
     )
 }

@@ -5,11 +5,16 @@ import save from "../assets/bookmark.svg"
 import profile from "../profile/prof/profile.avif"
 import useHome from "./Hooks"
 import Post from "../Post/Post"
+import Navbar from "../navbar/navbar"
 import "./style.css"
 const Home =()=>{
     const {more,setMore}=useHome()
     //<Post index={1} user={"Nambiha"} likes={"10k"} time={"5m"} description={"Lorem ipsum dolor, sit amet consectetur adipisicing elit."}/>
-    return(<section className="Home flex mid">
+    return(
+    <section className="flex">
+        <Navbar/>
+    <section className="Home flex mid">
+        
         <div className="posts-home column">
             <ul className="flex stories"></ul>
             <ul className="posts-list column gap-30">
@@ -41,6 +46,7 @@ const Home =()=>{
             </li>
             </ul>
             </div>
+    </section>
     </section>)
 }
 export default Home
