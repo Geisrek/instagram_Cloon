@@ -1,4 +1,5 @@
 import logo from './logo.svg';
+import Signin from './components/Signin/Signin';
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Profile from './components/profile/Profile';
@@ -8,7 +9,8 @@ function App() {
    <BrowserRouter>
    <Routes>
     <Route path='profile' element={<Profile/>}/>
-    <Route path='Home' element={<Home/>}/>
+    <Route path='home' element={<Home/>}/>
+    <Route path='signin' element={<Signin/>}/>
    </Routes>
    </BrowserRouter>
   );
