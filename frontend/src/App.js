@@ -5,7 +5,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Profile from './components/profile/Profile';
 import Home from './components/Home/Home';
 import Signup from './components/signup/Signup';
-import Navbar from './components/navbar/navbar';
+import AddPost from './components/AddPost/AddPost';
 function App() {
   return (
     
@@ -14,10 +14,11 @@ function App() {
    
      
    <Routes>
-    <Route path='profile' element={<Profile/>}/>
-    <Route path='home' element={<Home/>}/>
-    <Route path='signin' element={<Signin/>}/>
-    <Route path='Signup' element={<Signup/>}/>
+    <Route path='/profile' element={<Profile/>}/>
+    <Route path='/home' element={<Home/>}/>
+    <Route path='/signin' element={<Signin/>}/>
+    <Route path='/Signup' element={<Signup/>}/>
+    <Route path='/post'  element={<AddPost/>}/>
    </Routes>
   
    </BrowserRouter>

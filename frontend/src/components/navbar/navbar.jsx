@@ -21,7 +21,7 @@ const Navbar=()=>{
                 <img src={search} alt="" />
                 <h3>Search</h3>
             </div>
-            <div className="flex gap-5 nav-item">
+            <div className="flex gap-5 nav-item" onClick={()=>navigate("/post")}>
                 <img src={add} alt="" />
                 <h3>Add post</h3>
             </div>

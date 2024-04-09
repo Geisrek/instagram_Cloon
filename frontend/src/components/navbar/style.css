@@ -17,13 +17,16 @@
     align-items: center;
     font-size: 2rem;
     width: 20vw;
+    min-height: fit-content;
     left: 0;
     background-color: rgb(226, 224, 224);
+    height: 100vh;
+    min-height: 700px;
     
 }
 .logout{
     font-size: 2rem;
-    margin-top: 500px;
+    margin-top: 250px;
 }
 .nav-item{
     cursor: pointer;

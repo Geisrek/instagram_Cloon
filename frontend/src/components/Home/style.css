@@ -45,6 +45,7 @@
     border-top: 1px solid lightgray;
     margin: 3%;
     width: 40vw;   
+    font-size: 2rem;
     
 }
 .posts-list>li{
@@ -88,7 +89,7 @@
 .description{
     width: 100%;
     
-    
+   
     margin: 1%;
    padding: 1px;
    text-wrap: wrap;
@@ -126,7 +127,7 @@
     flex-direction: column;
     list-style: none;
     gap: 5px;
-    
+
 }
 input{
     width: 100%;
