@@ -33,10 +33,11 @@
     padding: 10%;
 }
 .pro-i-c{
-    width: 150px;
-    height: 150px;
+    width: 20vw;
+    height: 20vh;
     border: 1px solid white;
-    
+    min-height: 170px;
+    min-width: 170px;
     border-radius: 50%;
     background-image: linear-gradient(45deg, rgb(224, 189, 34), rgb(224, 154, 22), rgb(231, 29, 29));
     display: flex;
@@ -45,7 +46,8 @@
 }
 
 .profile-info{
-    padding-top: 10%;
+    font-size: 3rem;
+    padding-top: 2%;
    gap: 200px;
    padding-left: 10%;
    margin: 3%;
@@ -126,4 +128,7 @@ align-items: center;
 .post>img{
     height: 100%;
     width: 100%;
+}
+.categories{
+    font-size: 3rem;
 }

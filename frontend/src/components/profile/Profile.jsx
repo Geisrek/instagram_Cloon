@@ -42,7 +42,7 @@ const Profile=()=>{
                 <button>...</button>
             </div>
             <hr/>
-           <div className=" flex mid "><div className="flex mid-y gap-30" ><div className={`flex p gap-5 ${actives[0]}`} onClick={()=>setActives(["active","",""])}><img src={rows} alt="" /><h5>POSTS</h5></div><div className={`flex p gap-5 ${actives[1]}`} onClick={()=>setActives(["","active",""])}><img src={reels} alt="" /><h5>REELS</h5></div><div className={`flex p gap-5 ${actives[2]}`} onClick={()=>setActives(["","","active"])}><img src={tagg} alt="" /><h5>TAGGED</h5></div></div></div>
+           <div className=" flex mid categories"><div className="flex mid-y gap-30" ><div className={`flex p gap-5 ${actives[0]}`} onClick={()=>setActives(["active","",""])}><img src={rows} alt="" /><h5>POSTS</h5></div><div className={`flex p gap-5 ${actives[1]}`} onClick={()=>setActives(["","active",""])}><img src={reels} alt="" /><h5>REELS</h5></div><div className={`flex p gap-5 ${actives[2]}`} onClick={()=>setActives(["","","active"])}><img src={tagg} alt="" /><h5>TAGGED</h5></div></div></div>
            <div className="flex-wrap posts">
             <div className="post"><img src={profile}/></div>
             <div className="post"><img src={profile}/></div>
