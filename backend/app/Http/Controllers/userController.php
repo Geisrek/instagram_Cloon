@@ -19,4 +19,21 @@ class userController extends Controller
         "message"=>"success"
     ]);
    }
+   function signin (Request $req){
+    $email=$req->email;
+    $password=$req->password;
+    $user=users::where("email",$email)->first();
+    if(password_verify($password,$user["password"])){
+    
+    return response()->json([
+        "message"=>"success",
+        "user"=>$user
+    ]);
+    
+}else{
+    return response()->json([
+        "message"=>"access denied"
+    ]);
+}
+   }
 }
