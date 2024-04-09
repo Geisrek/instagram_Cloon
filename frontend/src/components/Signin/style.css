@@ -59,7 +59,8 @@
 .inputs>input{
     height: 30%;
     min-height: 2.5rem;
-    text-align: center;
+    text-align: start;
+    padding-left: 1%;
     background-color: rgb(231, 227, 227);
     font-size: 1.5rem;
 }
@@ -91,4 +92,10 @@ color: rgb(57, 57, 240);
 }
 .reset-pass{
     cursor: pointer;
+}
+.navigate-signup{
+    font-size: 2rem;
+}
+.navigate-signup>button{
+    font-size: 2rem;
 }

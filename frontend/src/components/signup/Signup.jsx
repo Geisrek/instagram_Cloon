@@ -1,20 +1,22 @@
 import "./style.css"
-import useSignin from "./Hook"
+import useSignup from "./Hook"
 import intro1 from "../assets/intro1.png"
 import facebook from "../assets/facebook.svg"
 const Signup=()=>{
+    const {userName,Password,email,setUserName,setPassword,setEmail,navigate}=useSignup()
 return(<section className="flex signin">
+ 
     <div className="intro">
-        <img src={intro1} alt="" srcset="" />
+        <img src={intro1} alt="" srcset="" className="intro-img"/>
     </div>
     <div>
         <div className="form column">
         <div className="top-form">
            <h1>Instagram</h1>
            <div className="column inputs">
-           <input type="text" />
-           <input type="text" />
-           <input type="text" />
+           <input type="text" value={email} onChange={setEmail}/>
+           <input type="text" value={userName} onChange={setUserName}/>
+           <input type="text" value={Password} onChange={setPassword}/>
            <button type="button" className="validate-btn">Login</button>
            </div>
           
@@ -29,7 +31,7 @@ return(<section className="flex signin">
           </div>
         </div>
         <div className="navigate-signup flex">
-             <span>Don't have an account?</span><button>Sign up</button>
+             <span>Do you have an account?</span><button onClick={()=>{navigate("/signin")}}>Sign in</button>
         </div>
     </div>
 </section>)
