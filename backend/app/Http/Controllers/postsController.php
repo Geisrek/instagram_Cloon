@@ -47,6 +47,6 @@ class postsController extends Controller
         $follows_posts=posts::join("follows as f","posts.user_id","=","f.followed")->where("f.follower",$user_id)->get();
         //$posts=array_merge($user_posts,$follows_posts);
         return response()->json(["status"=>"success",
-        "posts"=>$follows_posts,"My posts"=>$user_posts]);
+        "posts"=>$follows_posts,"user_posts"=>$user_posts]);
     }
 }

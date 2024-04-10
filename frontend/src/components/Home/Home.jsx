@@ -8,8 +8,16 @@ import Post from "../Post/Post"
 import Navbar from "../navbar/navbar"
 import "./style.css"
 const Home =()=>{
-    const {more,setMore}=useHome()
-    //<Post index={1} user={"Nambiha"} likes={"10k"} time={"5m"} description={"Lorem ipsum dolor, sit amet consectetur adipisicing elit."}/>
+    let posts_list=[]
+    const {more,setMore,posts_,setPosts,getPost,posts_url}=useHome()
+    if(posts_.length===0){
+  getPost(posts_url,setPosts);
+   }
+    else{
+        const {posts,user_posts}=posts_
+        posts_list=[...posts,...user_posts]
+       
+    }
     return(
     <section className="flex">
         <Navbar/>
@@ -18,21 +26,11 @@ const Home =()=>{
         <div className="posts-home column">
             <ul className="flex stories"></ul>
             <ul className="posts-list column gap-30">
-                <li className="column post-item">
-                    <div className="mid-y post-head flex "><div className="post-info mid flex gap-10"><div className="user-bg flex mid"><img src={profile} className="user"/></div><div className="flex mid gap"> <h4>Rafik</h4>
-                    <span>.5h</span></div></div><button>...</button></div>
-                    <div className="post-img-container"><img src={profile} className="post-img"/></div>
-                    <div className={`column post-text`}>
-                        <span>1K likes</span>
-                        
-                        <div className="flex reactions"><div className="flex gap-10"><img src={like} alt="" className="reaction-btn"/><img src={comment} alt="" className="reaction-btn"/><img src={share} alt="" className="reaction-btn"/></div><img src={save} className="reaction-btn"/></div>
-                      
-                        <div className={`description ${more}`}><div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur sint commodi eius autem veniam impedit, velit atque nesciunt ullam animi, veritatis optio reiciendis, distinctio eligendi unde! Consequatur laboriosam est facere. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid tempora modi officia voluptatum id amet odit magni eligendi labore! Beatae illum vero cum maiores saepe nam commodi magnam neque aut.</div></div>
-                       <span className="toggle-text" onClick={()=>setMore(more==="more"?"less":"more")}>see {more}</span>
-                       <div><input type="text" /></div>
-                    </div>
-                </li>
-                <Post index={1} user={"Nambiha"} likes={"10k"} time={"5m"} description={"Lorem ipsum dolor, sit amet consectetur adipisicing elit."}/>
+                {posts_list.map((item,index)=>{
+                    const {description,id}=item
+                    return <Post index={index} post_id={id} user={"Nambiha"} likes={"10k"} time={"5m"} description={description}/>
+                })}
+                
             </ul>
         </div>
         <div className="column user-ref gap-30"><div className="flex mid gap-10  prof"><div className="user-bg flex mid"><img className="user" src={profile} alt="" /></div><h4>User Name</h4></div>

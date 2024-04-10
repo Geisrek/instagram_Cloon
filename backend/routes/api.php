@@ -25,4 +25,4 @@ Route::post("/delete",[followsController::class,"unfollow"]);
 Route::post("/addPost",[postsController::class,"addPost"]);
 Route::post("/deletePost",[postsController::class,"deletePost"]);
 Route::post("/updatePost",[postsController::class,"updatePost"]);
-Route::get("/getPosts",[postsController::class,"getPosts"]);
+Route::post("/getPosts",[postsController::class,"getPosts"]);

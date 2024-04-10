@@ -32,8 +32,7 @@ setUserName:setUserName,
 setPassword:setPassword,
 setEmail:setEmail,
 navigate:navigate,
-Createmail:CreateAccount,
-url:url
+Createemail:CreateAccount
 })
 }
 export default useSignup
