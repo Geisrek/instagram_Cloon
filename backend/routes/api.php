@@ -19,3 +19,4 @@ use App\Http\Controllers\followsController;
 Route::post('/addUser',[userController::class,"addUser"]);
 Route::post("/signin",[userController::class,"signin"]);
 Route::post("/follow",[followsController::class,"addFollow"]);
+Route::post("/join",[followsController::class,"freands"]);

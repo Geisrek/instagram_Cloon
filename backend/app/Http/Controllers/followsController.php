@@ -13,4 +13,13 @@ class followsController extends Controller
     "follower"=>$follower]);
     return response()->json(["message"=>"success"]);
    }
+   
+   function freands(Request $req){
+    $id=$req->id;
+    $follows=follows::join("users","users.id",'=',"follows.followed")->get();
+    
+    return response()->json(["message"=>"success",
+"join"=>$follows]);
+   }
+   
 }
