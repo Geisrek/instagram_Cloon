@@ -21,5 +21,13 @@ class followsController extends Controller
     return response()->json(["message"=>"success",
 "join"=>$follows]);
    }
+   function unfollow(Request $req){
+    $followed=$req->followed;
+    $follower=$req->follower;
+
+    $follows=follows::where("follower",$follower)->where("followed",$followed)->first();
+    $follows->delete();
+    return response()->json(["message"=>"success"]);
+   }
    
 }
