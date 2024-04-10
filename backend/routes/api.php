@@ -23,3 +23,6 @@ Route::post("/follow",[followsController::class,"addFollow"]);
 Route::post("/join",[followsController::class,"freands"]);
 Route::post("/delete",[followsController::class,"unfollow"]);
 Route::post("/addPost",[postsController::class,"addPost"]);
+Route::post("/deletePost",[postsController::class,"deletePost"]);
+Route::post("/updatePost",[postsController::class,"updatePost"]);
+Route::get("/getPosts",[postsController::class,"getPosts"]);

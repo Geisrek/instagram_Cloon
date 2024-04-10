@@ -26,6 +26,7 @@ class followsController extends Controller
     $follower=$req->follower;
 
     $follows=follows::where("follower",$follower)->where("followed",$followed)->first();
+
     $follows->delete();
     return response()->json(["message"=>"success"]);
    }
