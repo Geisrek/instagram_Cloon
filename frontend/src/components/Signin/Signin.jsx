@@ -3,9 +3,11 @@ import useSignin from "./Hook"
 import intro1 from "../assets/intro1.png"
 import facebook from "../assets/facebook.svg"
 import Navbar from "../navbar/navbar"
+
 const Signin=()=>{
-    const{userName,password,setUserName,setPassword,navigate}=useSignin()
-return(<section className="flex signin">
+    const{email,password,setEmail,setPassword,navigate,auth,url}=useSignin()
+return(
+<section className="flex signin">
 
     <div className="intro">
         <img src={intro1} alt="" srcset="" className="intro-img"/>
@@ -15,9 +17,9 @@ return(<section className="flex signin">
         <div className="top-form">
            <h1>Instagram</h1>
            <div className="column inputs">
-           <input type="text" value={userName} onChange={(event)=>{setUserName(event.target.value)}}/>
-           <input type="text" value={password} onChange={(event)=>{setPassword(event.target.value)}}/>
-           <button type="button" className="validate-btn">Login</button>
+           <input type="text" value={email} onChange={(event)=>{setEmail(event.target.value)}}/>
+           <input type="password" value={password} onChange={(event)=>{setPassword(event.target.value)}}/>
+           <button type="button" className="validate-btn" onClick={()=>{auth(url,{email:email,password:password})}}>Login</button>
            </div>
           
 

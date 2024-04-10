@@ -14,7 +14,7 @@
 .signin{
     min-height: 700px;
     align-items: center;
-    font-size: 2rem;
+    font-size: 1rem;
 }
 .signin>div{
    padding: 2%;
@@ -58,24 +58,24 @@
 }
 .inputs>input{
     height: 30%;
-    min-height: 2.5rem;
+    min-height: 2rem;
     text-align: start;
    
     background-color: rgb(231, 227, 227);
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 .middle{
     width: 100%;
 }
 .validate-btn{
     margin-left: 7%;
-    height: 4rem;
+    height: 2rem;
     border: 1px non solid;
     background-color: rgba(93, 157, 252,0.7);
     margin-top: 1%;
     width: 90%;
     border-radius: 0.7rem;
-    font-size: 2rem;
+    font-size: 1rem;
     color: white;
 }
 .blue-c{
@@ -94,8 +94,8 @@ color: rgb(57, 57, 240);
     cursor: pointer;
 }
 .navigate-signup{
-    font-size: 2rem;
+    font-size: 1rem;
 }
 .navigate-signup>button{
-    font-size: 2rem;
+    font-size: 1rem;
 }

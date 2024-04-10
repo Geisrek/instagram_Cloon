@@ -3,7 +3,7 @@ import useSignup from "./Hook"
 import intro1 from "../assets/intro1.png"
 import facebook from "../assets/facebook.svg"
 const Signup=()=>{
-    const {userName,Password,email,setUserName,setPassword,setEmail,navigate}=useSignup()
+    const {userName,password,email,setUserName,setPassword,setEmail,navigate,Createmail,url}=useSignup()
 return(<section className="flex signin">
  
     <div className="intro">
@@ -14,10 +14,10 @@ return(<section className="flex signin">
         <div className="top-form">
            <h1>Instagram</h1>
            <div className="column inputs">
-           <input type="text" value={email} onChange={setEmail}/>
-           <input type="text" value={userName} onChange={setUserName}/>
-           <input type="text" value={Password} onChange={setPassword}/>
-           <button type="button" className="validate-btn">Login</button>
+           <input type="text" value={email} onChange={(event)=>setEmail(event.target.value)}/>
+           <input type="text" value={userName} onChange={(event)=>setUserName(event.target.value)}/>
+           <input type="text" value={password} onChange={(event)=>setPassword(event.target.value)}/>
+           <button type="button" className="validate-btn" onClick={()=>{Createmail(url,{email:email,name:userName,password:password})}}>Login</button>
            </div>
           
 
