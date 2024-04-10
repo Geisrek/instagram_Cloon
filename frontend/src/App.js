@@ -7,6 +7,9 @@ import Home from './components/Home/Home';
 import Signup from './components/signup/Signup';
 import AddPost from './components/AddPost/AddPost';
 function App() {
+  const user=localStorage.getItem("user")
+  const data=user?JSON.parse(user):null
+ 
   return (
     
     
@@ -14,11 +17,11 @@ function App() {
    
      
    <Routes>
-    <Route path='/profile' element={<Profile/>}/>
-    <Route path='/home' element={<Home/>}/>
+    <Route path='/profile' element={data?<Profile/>:<Signin/>}/>
+    <Route path='/' element={data?<Home/>:<Signin/>}/>
     <Route path='/signin' element={<Signin/>}/>
     <Route path='/Signup' element={<Signup/>}/>
-    <Route path='/post'  element={<AddPost/>}/>
+    <Route path='/post'  element={data?<AddPost/>:<Signin/>}/>
    </Routes>
   
    </BrowserRouter>

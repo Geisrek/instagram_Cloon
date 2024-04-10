@@ -16,7 +16,8 @@ try{
     const data=(response.data)
     const {message,user}=data
     if(message=="success"){
-        navigate("/home")
+        localStorage.setItem("user",JSON.stringify(user))
+       navigate("/")
     }
 }
 catch(err){

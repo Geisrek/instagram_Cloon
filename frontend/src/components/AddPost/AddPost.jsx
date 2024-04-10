@@ -3,7 +3,7 @@ import useAddPost from "./Hook"
 import face from "../assets/face.svg"
 import "./style.css"
 const AddPost=()=>{
-    const{post,setPost}=useAddPost()
+    const{post,setPost,CreatePost,url}=useAddPost()
     return(
     <section className="flex">
      <Navbar/>
@@ -11,7 +11,8 @@ const AddPost=()=>{
         <div className="post-bar flex">
         <input type="text" value={post} onChange={(event)=>{setPost(event.target.value)}}/>
         <img src={face} alt="" />
-        <button className="add-btn">Send</button>
+        <button className="add-btn" onClick={()=>{CreatePost(url,{user_id:1,des:post})
+         setPost("")}}>Send</button>
         </div>
      </section>
     </section>)

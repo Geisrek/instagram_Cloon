@@ -9,22 +9,22 @@
 }
 .post-bar>input{
    width: 80%;
-   height: 3rem;
-   font-size: 1.6rem;
+   height: 2rem;
+   font-size: 1rem;
    border-radius: 0.25rem;
    color: rgb(165, 164, 164);
    padding-left: 1%;
 }
 .post-bar>img{
     position: absolute;
-    left: 80%;
+    left: 76%;
     top: 30%;
     
 }
 .add-btn{
 border: 1px solid rgb(0, 119, 255);
-height: 3rem;
-width: 5rem;
-font-size: 1.6rem;
+height: 2rem;
+width: 4rem;
+font-size: 1rem;
 
 }
