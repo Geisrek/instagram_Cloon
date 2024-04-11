@@ -7,18 +7,20 @@ const useHome=()=>{
 const data=user?JSON.parse(user):null
 
     const posts_url=`http://localhost:8000/api/getPosts`
+  
 const getPost=async(url,setPosts)=>{
    
     try{
-        const response=await axios.post(url,{user_id:1})
+        const response=await axios.post(url,{user_id:data.id})
        setPosts(response.data)
-       console.log(response,"<-")
+     
        
     }
     catch(err){
         console.log(err)
     }
     }
+  
     return ({
         more:more,       
         setMore:setMore,

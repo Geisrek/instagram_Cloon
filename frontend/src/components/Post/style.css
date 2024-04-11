@@ -7,6 +7,9 @@
 .toggler{
     cursor: pointer;
 }
-.option_list{
-    
+.reaction-btn{
+    cursor: pointer;
+}
+.like{
+    background-color: rgb(255, 0, 85);
 }

@@ -5,8 +5,8 @@ import save from "../assets/bookmark.svg"
 import profile from "../profile/prof/profile.avif"
 import useHome from "./Hooks"
 import "./style.css"
-const Post=({index,description,likes,user,time})=>{
-    const {more,setMore,toggle,setToggle}=useHome()
+const Post=({index,post_id,description,likes,user,time})=>{
+    const {more,setMore,toggle,setToggle,makeLike,like_,setLike,id,likes_url,dislikes_url,share_url,SharePost}=useHome()
     return(
         <li key={index} className="column post-item">
                     <div className="mid-y post-head flex "><div className="post-info mid flex gap-10">
@@ -19,7 +19,17 @@ const Post=({index,description,likes,user,time})=>{
                     <div className={`column post-text`}>
                         <span>{likes} likes</span>
                         
-                        <div className="flex reactions"><div className="flex gap-10"><img src={like} alt="" className="reaction-btn"/><img src={comment} alt="" className="reaction-btn"/><img src={share} alt="" className="reaction-btn"/></div><img src={save} className="reaction-btn"/></div>
+                        <div className="flex reactions"><div className="flex gap-10"><button onClick={()=>{
+                            if(like_==="like")
+                            {
+                                setLike("dislike")
+                                makeLike(dislikes_url,{post_id:post_id,user_id:id})
+                            }
+                            else{
+                                setLike("like")
+                                makeLike(likes_url,{post_id:post_id,user_id:id})
+                            }
+                            }}><img src={like} alt="" className={`reaction-btn ${like_}`} /></button><img src={comment} alt="" className="reaction-btn"/><img src={share} alt="" className="reaction-btn" onClick={()=>SharePost(share_url,{user_id:id,des:description})}/></div><img src={save} className="reaction-btn"/></div>
                       
                         <div className={`description ${more}`}><div>{description}</div></div>
                        <span className="toggle-text" onClick={()=>setMore(more==="more"?"less":"more")}>see {more}</span>
