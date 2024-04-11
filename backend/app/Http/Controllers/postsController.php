@@ -49,4 +49,10 @@ class postsController extends Controller
         return response()->json(["status"=>"success",
         "posts"=>$follows_posts,"user_posts"=>$user_posts]);
     }
+    function getPost(Request $req){
+        $user_id=$req->user_id;
+        $post_id=$req->post_id;
+        $user_posts=posts::where("user_id",$user_id)->where("id",$post_id)->first();
+        return response()->json(["status"=>"success","user_posts"=>$user_posts]);
+    }
 }

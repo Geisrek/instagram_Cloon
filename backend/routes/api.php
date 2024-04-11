@@ -27,5 +27,6 @@ Route::post("/addPost",[postsController::class,"addPost"]);
 Route::post("/deletePost",[postsController::class,"deletePost"]);
 Route::post("/updatePost",[postsController::class,"updatePost"]);
 Route::post("/getPosts",[postsController::class,"getPosts"]);
+Route::post("/getPost",[postsController::class,"getPost"]);
 Route::post("/like",[likesController::class,"makeLike"]);
 Route::post("/dislike",[likesController::class,"disLike"]);
