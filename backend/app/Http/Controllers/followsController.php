@@ -29,8 +29,10 @@ class followsController extends Controller
       for($i=0;$i<count($follows);$i++){
          $friends=follows::join("users","users.id",'=',"follows.followed")->where("follows.follower",$follows[$id])->get();
          $friend=$follows[$i]->followed;
-         if(var_dump(array_key_exists($friend,$common_friends))){
-         $common_friends[$friend]=$friends;
+         if(!var_dump(array_key_exists($friend,$common_friends))){
+         $common_friends[$friend]=$friends[0]=1;
+      }else{
+         $common_friends[$friend]=$friends[0]+=1;
       }
       }
       return response()->json(["message"=>"success",
