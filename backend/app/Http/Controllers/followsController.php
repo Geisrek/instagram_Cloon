@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\follows;
+use App\Models\users;
 class followsController extends Controller
 {
    function addFollow(Request $req){
@@ -35,8 +36,13 @@ class followsController extends Controller
          $common_friends[$friend]=$friends[0]+=1;
       }
       }
+      $user=[];
+      for($i=0; $i<count($common_friends);$i++){
+         $id=array_keys($common_friends);
+          $user[]=users::where("id",$id)->first();
+      }
       return response()->json(["message"=>"success",
-  "common friends"=>$common_friends]);
+  "common friends"=>$user]);
      }
    function unfollow(Request $req){
     $followed=$req->followed;
