@@ -22,6 +22,7 @@ class followsController extends Controller
 "join"=>$follows]);
    }
    function comonfreands(Request $req){
+      //The king is here babe B)
       $id=$req->id;
       $follows=follows::join("users","users.id",'=',"follows.followed")->where("follows.follower",$id)->get();
       $common_friends=[];
