@@ -30,7 +30,7 @@ class followsController extends Controller
          $friends=follows::join("users","users.id",'=',"follows.followed")->where("follows.follower",$follows[$id])->get();
          $friend=$follows[$i]->followed;
          if(!var_dump(array_key_exists($friend,$common_friends))){
-         $common_friends[$friend]=$friends[0]=1;
+         $common_friends[$friend]=$friends[0]=0;
       }else{
          $common_friends[$friend]=$friends[0]+=1;
       }
