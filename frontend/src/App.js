@@ -6,6 +6,7 @@ import Profile from './components/profile/Profile';
 import Home from './components/Home/Home';
 import Signup from './components/signup/Signup';
 import AddPost from './components/AddPost/AddPost';
+import UserPosts from './components/userposts/UserPosts';
 function App() {
   const user=localStorage.getItem("user")
   const data=user?JSON.parse(user):null
@@ -18,6 +19,8 @@ function App() {
      
    <Routes>
     <Route path='/profile' element={data?<Profile/>:<Signin/>}/>
+    <Route path='/profile/post/:id_'  element={data?<UserPosts/>:<Signin/>}/>
+    <Route path='/post'  element={data?<AddPost/>:<Signin/>}/>
     <Route path='/' element={data?<Home/>:<Signin/>}/>
     <Route path='/signin' element={<Signin/>}/>
     <Route path='/Signup' element={<Signup/>}/>
