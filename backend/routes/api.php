@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\userController;
 use App\Http\Controllers\followsController;
 use App\Http\Controllers\postsController;
+use App\Http\Controllers\likesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,3 +27,5 @@ Route::post("/addPost",[postsController::class,"addPost"]);
 Route::post("/deletePost",[postsController::class,"deletePost"]);
 Route::post("/updatePost",[postsController::class,"updatePost"]);
 Route::post("/getPosts",[postsController::class,"getPosts"]);
+Route::post("/like",[likesController::class,"makeLike"]);
+Route::post("/dislike",[likesController::class,"disLike"]);

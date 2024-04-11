@@ -1,0 +1,12 @@
+.hide{
+    visibility: hidden;
+}
+.show{
+    visibility:visible;
+}
+.toggler{
+    cursor: pointer;
+}
+.option_list{
+    
+}
