@@ -28,7 +28,7 @@ const UserPosts=({index})=>{
         <div className="user-bg flex mid">
             <img src={profile} className="user"/></div><div className="flex mid gap"> <h4>{name}</h4>
     <span>.5h</span></div></div><div className="column"><button className="toggler" onClick={()=>(toggle==="hide")?setToggle("show"):setToggle("hide")}>...</button><div className={`option_list column ${toggle}`}>
-         <div className="option" onClick={()=>deletePost(delete_url,{id:id_})}>delete</div>
+         <div className="option back" onClick={()=>deletePost(delete_url,{id:id_})}>delete</div>
     <div className="option">update</div>
     <div className="option"></div><div/></div></div></div>
     <div className="post-img-container"><img src={profile} className="post-img"/></div>
