@@ -36,7 +36,7 @@ class followsController extends Controller
       }
       }
       return response()->json(["message"=>"success",
-  "join"=>$common_friends]);
+  "common friends"=>$common_friends]);
      }
    function unfollow(Request $req){
     $followed=$req->followed;
