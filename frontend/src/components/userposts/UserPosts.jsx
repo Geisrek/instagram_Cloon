@@ -5,6 +5,7 @@ import save from "../assets/bookmark.svg"
 import profile from "../profile/prof/profile.avif";
 import usePost from "./Hook";
 import { useParams } from 'react-router-dom';
+import "./style.css"
 const UserPosts=({index})=>{
     
     const {more,setMore,toggle,setToggle,makeLike,name,like_,
@@ -14,7 +15,7 @@ const UserPosts=({index})=>{
     const ob=useParams()
     const {id_}=ob
     console.log(id_)
-    if(description==="" || description===undefined){
+    if(description===""){
         getPost(post_url,setDescription,{post_id:id_})
         console.log(description,"<")
     }
