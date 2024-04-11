@@ -24,8 +24,16 @@ class followsController extends Controller
    function comonfreands(Request $req){
       $id=$req->id;
       $follows=follows::join("users","users.id",'=',"follows.followed")->where("follows.follower",$id)->get();
+      $common_friends=[];
+      for($i=0;$i<count($follows);$i++){
+         $friends=follows::join("users","users.id",'=',"follows.followed")->where("follows.follower",$follows[$id])->get();
+         $friend=$follows[$i]->followed;
+         if(var_dump(array_key_exists($friend,$common_friends))){
+         $common_friends[$friend]=$friends;
+      }
+      }
       return response()->json(["message"=>"success",
-  "join"=>$follows]);
+  "join"=>$common_friends]);
      }
    function unfollow(Request $req){
     $followed=$req->followed;
